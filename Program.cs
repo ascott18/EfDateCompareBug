@@ -41,15 +41,15 @@ namespace EfDateCompareBug
 
             Console.WriteLine("         LHS/Db Column     RHS/Parameter");
             Console.WriteLine("----------------------------------------");
-            Console.WriteLine("SqlQuery DateTime       == DateTime:       {0}", db.People.Any(p => p.DateTime == dateTimeOffset.DateTime));
-            Console.WriteLine("SqlQuery DateTime       == DateTimeOffset: {0}", db.People.Any(p => p.DateTime == dateTimeOffset));
-            Console.WriteLine("SqlQuery DateTimeOffset == DateTime:       {0}", db.People.Any(p => p.DateTimeOffset == dateTimeOffset.DateTime));
-            Console.WriteLine("SqlQuery DateTimeOffset == DateTimeOffset: {0}", db.People.Any(p => p.DateTimeOffset == dateTimeOffset));
+            Console.WriteLine("SqlSvr  DateTime       == DateTime:       {0}", db.People.Any(p => p.DateTime == dateTimeOffset.DateTime));
+            Console.WriteLine("SqlSvr  DateTime       == DateTimeOffset: {0}", db.People.Any(p => p.DateTime == dateTimeOffset));
+            Console.WriteLine("SqlSvr  DateTimeOffset == DateTime:       {0}", db.People.Any(p => p.DateTimeOffset == dateTimeOffset.DateTime));
+            Console.WriteLine("SqlSvr  DateTimeOffset == DateTimeOffset: {0}", db.People.Any(p => p.DateTimeOffset == dateTimeOffset));
             Console.WriteLine("----------------------------------------");
-            Console.WriteLine(".NET     DateTime       == DateTime:       {0}", person.DateTime == dateTimeOffset.DateTime);
-            Console.WriteLine(".NET     DateTime       == DateTimeOffset: {0}", person.DateTime == dateTimeOffset);
-            Console.WriteLine(".NET     DateTimeOffset == DateTime:       {0}", person.DateTimeOffset == dateTimeOffset.DateTime);
-            Console.WriteLine(".NET     DateTimeOffset == DateTimeOffset: {0}", person.DateTimeOffset == dateTimeOffset);
+            Console.WriteLine(".NET    DateTime       == DateTime:       {0}", person.DateTime == dateTimeOffset.DateTime);
+            Console.WriteLine(".NET    DateTime       == DateTimeOffset: {0}", person.DateTime == dateTimeOffset);
+            Console.WriteLine(".NET    DateTimeOffset == DateTime:       {0}", person.DateTimeOffset == dateTimeOffset.DateTime);
+            Console.WriteLine(".NET    DateTimeOffset == DateTimeOffset: {0}", person.DateTimeOffset == dateTimeOffset);
         }
     }
 }
